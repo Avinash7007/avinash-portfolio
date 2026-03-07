@@ -1,47 +1,162 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Avinash Dubey | Data Analyst</title>
 
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+<!-- ICONS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 <style>
+
+*{margin:0;padding:0;box-sizing:border-box}
+
 body{
-font-family:Arial;
-margin:0;
-background:#f5f5f5
+font-family:'Poppins',sans-serif;
+background:#f4f7fb;
+color:#222;
+line-height:1.6
 }
 
-.header{
-background:black;
-color:white;
+html{scroll-behavior:smooth}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+width:100%;
+top:0;
+background:white;
+padding:15px;
 text-align:center;
-padding:60px
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+z-index:1000
+}
+
+.navbar a{
+margin:0 15px;
+text-decoration:none;
+color:#333;
+font-weight:500
+}
+
+.navbar a:hover{color:#1f3b73}
+
+/* HEADER */
+
+.header{
+text-align:center;
+padding:130px 20px 70px;
+background:linear-gradient(135deg,#1f3b73,#0d1b2a);
+color:white
 }
 
 .header img{
 width:150px;
 border-radius:50%;
+border:4px solid white;
 margin-bottom:15px
 }
 
+.header h1{font-size:38px;margin-bottom:8px}
+.header p{font-size:18px;opacity:.9}
+
+/* SOCIAL */
+
+.social{
+margin-top:15px;
+font-size:22px
+}
+
+.social a{
+color:white;
+margin:0 10px
+}
+
+/* SECTIONS */
+
 .section{
+max-width:1000px;
+margin:30px auto;
 padding:40px;
 background:white;
-margin:20px;
-border-radius:8px
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,.05)
 }
 
 h2{
-border-bottom:2px solid black;
-padding-bottom:10px
+margin-bottom:15px;
+border-bottom:3px solid #1f3b73;
+display:inline-block;
+padding-bottom:6px
 }
 
-.project{
-margin-bottom:15px
+/* SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:10px
 }
+
+.skill{
+background:#eef2ff;
+padding:10px 16px;
+border-radius:20px;
+font-size:14px
+}
+
+/* CONTACT */
+
+.contact i{
+margin-right:8px;
+color:#1f3b73
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 18px;
+background:#1f3b73;
+color:white;
+border-radius:6px;
+text-decoration:none
+}
+
+.btn:hover{background:#111}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.header h1{font-size:28px}
+.section{margin:15px;padding:25px}
+
+}
+
 </style>
+
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+
+<!-- HEADER -->
 
 <div class="header">
 
@@ -50,46 +165,57 @@ margin-bottom:15px
 <h1>Avinash Dubey</h1>
 <p>Data Analyst | SQL • Power BI • Python</p>
 
+<div class="social">
+
+<a href="https://github.com/Avinash7007" target="_blank">
+<i class="fa-brands fa-github"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/avinash7007/" target="_blank">
+<i class="fa-brands fa-linkedin"></i>
+</a>
+
 </div>
 
-<div class="section">
+</div>
+
+<!-- ABOUT -->
+
+<div id="about" class="section">
 <h2>About</h2>
+<p>Data Analyst with nearly 3 years of experience in SQL, Python, Power BI, and Excel. Skilled in building dashboards, automating workflows, and delivering actionable insights across retail and customer analytics domains.</p>
 
-<p>Data Analyst with nearly 3 years of experience in SQL, Python, Power BI, and Excel, specializing in data visualization, EDA, and business intelligence reporting. Experienced in transforming large-scale datasets and delivering actionable insights across retail and customer analytics domains.</p>
+<a class="btn" href="resume.pdf">Download Resume</a>
 
 </div>
 
-<div class="section">
+<!-- SKILLS -->
+
+<div id="skills" class="section">
+
 <h2>Skills</h2>
 
-<p>SQL • Power BI • Python • Excel • DAX • Data Modeling • EDA • Reporting Automation</p>
-
-</div>
-
-<div class="section">
-<h2>Projects</h2>
-
-<div class="project">
-<h3>Retail Sales & Customer Analysis</h3>
-<p>Designed end-to-end BI solution tracking $2.27M sales and 46.9% YoY growth using SQL, Python, and Power BI.</p>
-</div>
-
-<div class="project">
-<h3>Customer Churn Analysis</h3>
-<p>Developed interactive dashboard identifying high-risk segments and enabling data-driven retention strategies.</p>
-</div>
-
-<div class="project">
-<h3>Hospitality Revenue Insights</h3>
-<p>Built dashboards tracking occupancy and revenue across 15+ properties for pricing optimization.</p>
+<div class="skills">
+<div class="skill">SQL</div>
+<div class="skill">Power BI</div>
+<div class="skill">Python</div>
+<div class="skill">Excel</div>
+<div class="skill">DAX</div>
+<div class="skill">EDA</div>
+<div class="skill">Data Modeling</div>
 </div>
 
 </div>
 
-<div class="section">
+<!-- CONTACT -->
+
+<div id="contact" class="section contact">
+
 <h2>Contact</h2>
-<p>Email: dubeyavinash157@gmail.com</p>
-<p>Phone: +91 7007682626</p>
+
+<p><i class="fa-solid fa-envelope"></i>dubeyavinash157@gmail.com</p>
+<p><i class="fa-solid fa-phone"></i>+91 7007682626</p>
+
 </div>
 
 </body>
