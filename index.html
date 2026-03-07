@@ -53,7 +53,7 @@ background:linear-gradient(135deg,#1f3b73,#0d1b2a);
 color:white
 }
 
-/* 🔥 FIXED IMAGE */
+/* IMAGE FIX */
 
 .header img{
 width:150px;
@@ -76,4 +76,129 @@ font-size:22px
 
 .social a{
 color:white;
-margin:0
+margin:0 10px
+}
+
+/* SECTIONS */
+
+.section{
+max-width:1000px;
+margin:30px auto;
+padding:40px;
+background:white;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,.05)
+}
+
+h2{
+margin-bottom:15px;
+border-bottom:3px solid #1f3b73;
+display:inline-block;
+padding-bottom:6px
+}
+
+/* SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:10px
+}
+
+.skill{
+background:#eef2ff;
+padding:10px 16px;
+border-radius:20px;
+font-size:14px
+}
+
+/* CONTACT */
+
+.contact i{
+margin-right:8px;
+color:#1f3b73
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 18px;
+background:#1f3b73;
+color:white;
+border-radius:6px;
+text-decoration:none
+}
+
+.btn:hover{background:#111}
+
+@media(max-width:768px){
+.header h1{font-size:28px}
+.section{margin:15px;padding:25px}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+
+<div class="header">
+
+<img src="avinash_dubey.jpeg">
+
+<h1>Avinash Dubey</h1>
+<p>Data Analyst | SQL • Power BI • Python</p>
+
+<div class="social">
+
+<a href="https://github.com/Avinash7007" target="_blank">
+<i class="fa-brands fa-github"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/avinash7007/" target="_blank">
+<i class="fa-brands fa-linkedin"></i>
+</a>
+
+</div>
+
+</div>
+
+<div id="about" class="section">
+<h2>About</h2>
+<p>Data Analyst with nearly 3 years of experience in SQL, Python, Power BI, and Excel. Skilled in dashboards, automation, and business insights.</p>
+
+<a class="btn" href="resume.pdf">Download Resume</a>
+</div>
+
+<div id="skills" class="section">
+<h2>Skills</h2>
+
+<div class="skills">
+<div class="skill">SQL</div>
+<div class="skill">Power BI</div>
+<div class="skill">Python</div>
+<div class="skill">Excel</div>
+<div class="skill">DAX</div>
+<div class="skill">EDA</div>
+<div class="skill">Data Modeling</div>
+</div>
+
+</div>
+
+<div id="contact" class="section contact">
+<h2>Contact</h2>
+
+<p><i class="fa-solid fa-envelope"></i> dubeyavinash157@gmail.com</p>
+<p><i class="fa-solid fa-phone"></i> +91 7007682626</p>
+
+</div>
+
+</body>
+</html>
