@@ -251,6 +251,18 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); pa
 }
 
 .cert-card-img { padding: 0 !important; overflow: hidden; }
+
+/* Story block */
+.story-block { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.story-row { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; line-height: 1.6; }
+.story-label { font-size: 9px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; flex-shrink: 0; margin-top: 1px; min-width: 62px; text-align: center; }
+.story-text { color: var(--muted2); }
+.story-problem { background: rgba(239,68,68,0.12); color: #f87171; }
+.story-data    { background: rgba(99,102,241,0.12); color: #a5b4fc; }
+.story-approach{ background: rgba(234,179,8,0.12);  color: #fcd34d; }
+.story-insight { background: rgba(0,229,255,0.10);  color: var(--cyan); }
+.story-impact  { background: rgba(34,197,94,0.12);  color: #4ade80; }
+.story-impact-row .story-text { color: #4ade80; font-weight: 500; }
 </style>
 </head>
 <body>
@@ -425,9 +437,13 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); pa
       <div class="project-body">
         <div class="project-domain">Retail Analytics / Business Analytics</div>
         <div class="project-title">Consumer Goods Sales Analysis</div>
-        <div class="project-problem"><span class="prob-label">Problem</span> Revenue flat 4 years, 33% orders cancelling, customers churning silently — no consolidated reporting layer existed.</div>
-        <div class="project-meta-row"><span class="pmeta">&#128194; 1L+ Transactions</span><span class="pmeta">&#128202; 9 Source Tables</span><span class="pmeta">&#128197; 2022–2025</span></div>
-        <div class="project-desc">Built a structured SQL analytics layer uncovering &#8377;20.96 Cr revenue at risk, 33.5% cancellation rate, and 2,389 at-risk customers — replacing ad hoc Excel with 54 production-ready T-SQL queries across 9 business sections.</div>
+        <div class="story-block">
+          <div class="story-row"><span class="story-label story-problem">Problem</span><span class="story-text">Revenue flat 4 years, 33% cancellation rate, customers churning silently — zero consolidated reporting.</span></div>
+          <div class="story-row"><span class="story-label story-data">Dataset</span><span class="story-text">1L+ transactions across 9 source tables (Sales, Shipment, Returns, Payments, Customers) · 2022–2025</span></div>
+          <div class="story-row"><span class="story-label story-approach">Approach</span><span class="story-text">54 T-SQL queries across revenue trends, churn classification, payment reconciliation &amp; customer segmentation</span></div>
+          <div class="story-row"><span class="story-label story-insight">Insights</span><span class="story-text">33.5% cancellation · ₹20.96 Cr revenue at risk · 2,389 at-risk customers · Return root cause = Late Delivery</span></div>
+          <div class="story-row story-impact-row"><span class="story-label story-impact">Impact</span><span class="story-text">Replaced ad hoc Excel reporting with a production-ready SQL analytics layer across all 9 business domains</span></div>
+        </div>
 
         <!-- Work Samples Slider -->
         <div class="ws-label">Work Samples</div>
@@ -461,9 +477,13 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); pa
       <div class="project-body">
         <div class="project-domain">ECommerce / Retail Analytics</div>
         <div class="project-title">Retail Sales and Customer Analysis</div>
-        <div class="project-problem"><span class="prob-label">Problem</span> No unified view of sales performance, regional trends, or customer behavior — management flying blind on KPIs.</div>
-        <div class="project-meta-row"><span class="pmeta">&#128194; Novamart Dataset</span><span class="pmeta">&#128202; Power BI + DAX</span><span class="pmeta">&#128197; Multi-Year</span></div>
-        <div class="project-desc">Built interactive Power BI dashboard tracking $725K sales, 21% growth, AOV, profit margin, delivery performance, and customer segmentation across 4 regions.</div>
+        <div class="story-block">
+          <div class="story-row"><span class="story-label story-problem">Problem</span><span class="story-text">No unified KPI view — management had no visibility into sales trends, regional gaps, or customer behavior.</span></div>
+          <div class="story-row"><span class="story-label story-data">Dataset</span><span class="story-text">Novamart retail dataset · Orders, products, customers, regions · Multi-year transaction data</span></div>
+          <div class="story-row"><span class="story-label story-approach">Approach</span><span class="story-text">Star schema data model in Power BI + DAX measures for Sales, Profit, AOV, Delivery &amp; Customer KPIs</span></div>
+          <div class="story-row"><span class="story-label story-insight">Insights</span><span class="story-text">$725K sales tracked · 21% YoY growth · Customer segmentation across 4 regions · Delivery SLA gaps identified</span></div>
+          <div class="story-row story-impact-row"><span class="story-label story-impact">Impact</span><span class="story-text">Delivered an executive-ready dashboard enabling data-backed decisions on inventory, marketing &amp; logistics</span></div>
+        </div>
 
         <div class="ws-label">Work Samples</div>
         <div class="ws-slider" id="ws2">
@@ -492,9 +512,13 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); pa
       <div class="project-body">
         <div class="project-domain">Banking Analytics / Customer Analytics</div>
         <div class="project-title">Bank Customer Churn Analysis &mdash; SQL &amp; BI Case Study</div>
-        <div class="project-problem"><span class="prob-label">Problem</span> 20.66% churn rate with no visibility into which customers were leaving and why — retention team had no data to act on.</div>
-        <div class="project-meta-row"><span class="pmeta">&#128194; 10K Customers</span><span class="pmeta">&#128202; SQL + Power BI</span><span class="pmeta">&#128197; 2016–2019</span></div>
-        <div class="project-desc">End-to-end churn analytics identifying attrition drivers across demographics, tenure, credit score, and geography. Enabled data-backed retention strategy contributing to ~12% churn risk reduction.</div>
+        <div class="story-block">
+          <div class="story-row"><span class="story-label story-problem">Problem</span><span class="story-text">20.66% churn rate — retention team had no data on who was leaving, when, or why.</span></div>
+          <div class="story-row"><span class="story-label story-data">Dataset</span><span class="story-text">10K bank customers · Demographics, tenure, credit score, balance, activity level · 2016–2019</span></div>
+          <div class="story-row"><span class="story-label story-approach">Approach</span><span class="story-text">SQL for data prep + Power BI star schema model + DAX measures for churn rate, monthly exits &amp; segment analysis</span></div>
+          <div class="story-row"><span class="story-label story-insight">Insights</span><span class="story-text">Female customers churn 56% more · Fair credit score = highest exits · Inactive members = primary churn driver</span></div>
+          <div class="story-row story-impact-row"><span class="story-label story-impact">Impact</span><span class="story-text">Enabled data-backed retention strategy targeting high-risk segments · Contributing to ~12% churn risk reduction</span></div>
+        </div>
 
         <div class="ws-label">Work Samples</div>
         <div class="ws-slider" id="ws3">
