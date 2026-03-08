@@ -617,6 +617,11 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); pa
   </div>
 </section>
 
+<div id="ws-lightbox" class="ws-lightbox">
+  <span class="ws-lightbox-close">&times;</span>
+  <img src="" alt="" />
+</div>
+
 <footer>
   <div class="footer-logo">AVINASH DUBEY</div>
   <div class="footer-copy">&#169; 2026 &middot; Data Analyst &middot; India</div>
@@ -655,9 +660,9 @@ function wsUpdateUI(id, total) {
 // Lightbox
 document.addEventListener('click', function(e) {
   if (e.target.classList.contains('ws-img')) {
-    var lb = document.getElementById('ws-lightbox');
     lb.classList.add('open');
     lb.querySelector('img').src = e.target.src;
+    lb.querySelector('.ws-lightbox-cap') && (lb.querySelector('.ws-lightbox-cap').textContent = e.target.alt || '');
   }
 });
 document.getElementById('ws-lightbox').addEventListener('click', function(e) {
