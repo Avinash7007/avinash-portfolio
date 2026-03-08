@@ -634,7 +634,7 @@ setTimeout(function() { fadeEls.forEach(function(el) { el.classList.add('visible
 // Work Samples Slider
 var wsState = {};
 function wsSlide(id, dir) {
-  if (!wsState[id]) wsState[id] = 0;
+  if (wsState[id] === undefined) wsState[id] = 0;
   var track = document.getElementById(id + '-track');
   var imgs = track.querySelectorAll('.ws-img');
   wsState[id] = (wsState[id] + dir + imgs.length) % imgs.length;
@@ -656,3 +656,15 @@ function wsUpdateUI(id, total) {
 document.addEventListener('click', function(e) {
   if (e.target.classList.contains('ws-img')) {
     var lb = document.getElementById('ws-lightbox');
+    lb.classList.add('open');
+    lb.querySelector('img').src = e.target.src;
+  }
+});
+document.getElementById('ws-lightbox').addEventListener('click', function(e) {
+  if (e.target === this || e.target.classList.contains('ws-lightbox-close')) {
+    this.classList.remove('open');
+  }
+});
+</script>
+</body>
+</html>
