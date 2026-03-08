@@ -602,7 +602,7 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); pa
     <div class="fade-in">
       <p class="contact-text">Feel free to get in touch. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
       <div class="contact-links">
-        <a href="mailto:dubeyavinash157&#64;gmail.com" class="contact-link"><div class="cl-icon">&#9993;</div><div><div class="cl-label">Email</div><div class="cl-value">dubeyavinash157&#64;gmail.com</div></div></a>
+        <a href="#" onclick="window.location.href='mail'+'to:dubeyavinash157'+'@gmail.com';return false;" class="contact-link"><div class="cl-icon">&#9993;</div><div><div class="cl-label">Email</div><div class="cl-value">dubeyavinash157&#64;gmail.com</div></div></a>
         <a href="tel:+917007682626" class="contact-link"><div class="cl-icon">&#128241;</div><div><div class="cl-label">Phone</div><div class="cl-value">+91 7007682626</div></div></a>
         <a href="https://linkedin.com/in/avinash7007/" target="_blank" class="contact-link"><div class="cl-icon">&#128188;</div><div><div class="cl-label">LinkedIn</div><div class="cl-value">linkedin.com/in/avinash7007</div></div></a>
         <a href="https://github.com/Avinash7007" target="_blank" class="contact-link"><div class="cl-icon">&#128025;</div><div><div class="cl-label">GitHub</div><div class="cl-value">github.com/Avinash7007</div></div></a>
@@ -611,7 +611,7 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); pa
     <div class="contact-cta fade-in">
       <div class="cta-title">Open to New Roles</div>
       <p class="cta-text">Actively targeting mid-size product-based companies in the NCR region. If you're looking for a data analyst who delivers measurable business impact &mdash; let's talk.</p>
-      <a href="mailto:dubeyavinash157&#64;gmail.com" class="btn-primary">Send Me a Message &#8594;</a>
+      <a href="#" onclick="window.location.href='mail'+'to:dubeyavinash157'+'@gmail.com';return false;" class="btn-primary">Send Me a Message &#8594;</a>
     </div>
   </div>
 </section>
@@ -621,7 +621,7 @@ footer { position: relative; z-index: 1; border-top: 1px solid var(--border); pa
   <div class="footer-copy">&#169; 2026 &middot; Data Analyst &middot; India</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 var observer = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
@@ -655,9 +655,3 @@ function wsUpdateUI(id, total) {
 document.addEventListener('click', function(e) {
   if (e.target.classList.contains('ws-img')) {
     var lb = document.getElementById('ws-lightbox');
-    document.getElementById('ws-lb-img').src = e.target.src;
-    lb.classList.add('open');
-  }
-});
-document.addEventListener('click', function(e) {
-  if (e.target.id === 'ws-lightbox' || e.target.id === 'ws-lb-clo
