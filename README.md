@@ -2,9 +2,10 @@
 
 A single-page, dark-themed personal portfolio website built to showcase my work as a **Data Analyst** — dashboards, SQL/ETL pipelines, and data-driven projects across Retail, E-Commerce, and Consumer Goods.
 
-🔗 **Live Site:** _add your deployed link here (e.g. GitHub Pages / Netlify / Vercel)_
-🔗 **LinkedIn:** [linkedin.com/in/avinash7007](https://linkedin.com/in/avinash7007)
-🔗 **GitHub:** [github.com/Avinash7007](https://github.com/Avinash7007)
+🔗 **Live Site:** _add your deployed link here (e.g. GitHub Pages / Netlify / Vercel)
+<p>🔗 **LinkedIn:** [linkedin.com/in/avinash7007](https://linkedin.com/in/avinash7007)
+<p>🔗 **GitHub:** [github.com/Avinash7007](https://github.com/Avinash7007)
+<p>    **email:**  dubeyavinash157@gmail.com
 
 ---
 
@@ -80,9 +81,10 @@ _(See the live site's Projects section for full case studies with problem statem
 ---
 
 ## 📫 Contact
-
+- **Author:** Avinash Dubey 
 - **LinkedIn:** [linkedin.com/in/avinash7007](https://linkedin.com/in/avinash7007)
 - **GitHub:** [github.com/Avinash7007](https://github.com/Avinash7007)
+-  **email:**  dubeyavinash157@gmail.com
 
 ---
 
