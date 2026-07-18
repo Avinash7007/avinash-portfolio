@@ -4,8 +4,8 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Avinash Dubey - Data Analyst | SQL, Power BI, Python | India</title>
-<meta name="description" content="Avinash Dubey is a Data Analyst with 3+ years of experience in SQL, Power BI, DAX, Python and Excel. Based in NCR (Noida), India. Available for new opportunities."/>
-<meta name="keywords" content="Data Analyst, SQL, Power BI, DAX, T-SQL, Python, Excel, Business Intelligence, Dashboard, Analytics, Noida, NCR, Delhi, India, Avinash Dubey, data analyst noida, data analyst ncr"/>
+<meta name="description" content="Avinash Dubey is a Data Analyst with 3+ years of experience in SQL, Power BI, DAX, Python and Excel. Based in India. Available for new opportunities."/>
+<meta name="keywords" content="Data Analyst, SQL, Power BI, DAX, T-SQL, Python, Excel, Business Intelligence, Dashboard, Analytics, India, Avinash Dubey, data analyst india"/>
 <meta name="author" content="Avinash Dubey"/>
 <meta name="robots" content="index, follow"/>
 <meta property="og:title" content="Avinash Dubey - Data Analyst | SQL &amp; Power BI"/>
@@ -21,8 +21,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#080d12;--bg2:#0d1520;--cyan:#00e5ff;--cyan2:#00b8d4;--white:#fff;--gray:#8899aa;--gray2:#c5d0dc;--border:rgba(0,229,255,0.12)}
+:root{--bg:#0a1628;--bg2:#0d2040;--cyan:#c9a84c;--cyan2:#e8c96a;--white:#fff;--gray:#8a9bb0;--gray2:#c5d0dc;--border:rgba(201,168,76,0.2)}
 body{background:var(--bg);color:var(--white);font-family:'Barlow',sans-serif;overflow-x:hidden;font-size:15px;line-height:1.6;scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--cyan);color:var(--bg)}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:6px}
+::-webkit-scrollbar-thumb:hover{background:var(--cyan)}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:999;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(8,13,18,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
@@ -30,9 +35,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:60px;display:flex;ali
 .nav-links{display:flex;list-style:none}
 .nav-links a{display:block;padding:6px 16px;color:var(--gray2);text-decoration:none;font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;border-radius:4px;transition:all .2s;cursor:pointer}
 .nav-links a:hover{color:var(--cyan)}
-.nav-links a.active{background:var(--cyan);color:#000}
-.hire{background:var(--cyan);color:#000;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;letter-spacing:2px;text-transform:uppercase;padding:8px 20px;border-radius:4px;text-decoration:none;cursor:pointer}
+.nav-links a.active{background:var(--cyan);color:var(--bg)}
+.hire{background:var(--cyan);color:var(--bg);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;letter-spacing:2px;text-transform:uppercase;padding:8px 20px;border-radius:4px;text-decoration:none;cursor:pointer}
 .hire:hover{background:var(--cyan2)}
+.nav-call{color:var(--cyan);font-family:'Space Mono',monospace;font-size:13px;font-weight:600;text-decoration:none;letter-spacing:.5px;margin-right:20px;white-space:nowrap;transition:color .2s}
+.nav-call:hover{color:var(--cyan2)}
+@media(max-width:900px){.nav-call{display:none}}
+
+/* FLOATING CALL BUTTON */
+.float-actions{position:fixed;right:24px;bottom:24px;display:flex;flex-direction:column;gap:12px;z-index:998;align-items:flex-end}
+.float-btn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;position:relative;transition:transform .2s}
+.float-btn:hover{transform:scale(1.08)}
+.float-btn-icon{font-size:23px;position:relative;z-index:2}
+.float-wa{background:#25d366;box-shadow:0 6px 18px rgba(37,211,102,.4)}
+.float-wa .float-btn-icon{display:flex;align-items:center;justify-content:center}
+.float-call2{width:46px;height:46px;background:var(--bg2);border:1px solid var(--border);box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.float-call2 .float-btn-icon{font-size:19px;color:var(--cyan)}
+.float-ring{position:absolute;inset:0;border-radius:50%;background:#25d366;opacity:.5;animation:callPulse 2s ease-out infinite}
+.float-tip{position:absolute;right:66px;top:50%;transform:translateY(-50%);background:var(--bg2);color:var(--white);font-family:'Barlow',sans-serif;font-size:13px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--border);white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.float-btn:hover .float-tip{opacity:1}
+@keyframes callPulse{0%{transform:scale(1);opacity:.5}100%{transform:scale(1.9);opacity:0}}
+@media(max-width:600px){.float-actions{right:16px;bottom:16px;gap:10px}.float-wa{width:52px;height:52px}.float-call2{width:42px;height:42px}}
 
 /* LAYOUT */
 .wrap{max-width:1400px;margin:0 auto;padding:100px 80px}
@@ -40,10 +63,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:60px;display:flex;ali
 .sec-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(48px,6vw,80px);line-height:1;text-transform:uppercase;margin-bottom:48px}
 .sec-title span{color:var(--cyan)}
 .divider{border:none;border-top:1px solid var(--border);margin:0 80px}
-.btn-p{background:var(--cyan);color:#000;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:12px 24px;border-radius:4px;text-decoration:none;display:inline-flex;align-items:center}
+.btn-p{background:var(--cyan);color:var(--bg);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:12px 24px;border-radius:4px;text-decoration:none;display:inline-flex;align-items:center}
+.btn-wa{background:#25d366;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:12px 24px;border-radius:4px;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn-wa:hover{background:#1fb855}
 .btn-p:hover{background:var(--cyan2)}
 .btn-o{border:1px solid var(--cyan);color:var(--cyan);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:12px 24px;border-radius:4px;text-decoration:none;display:inline-flex;align-items:center}
-.btn-o:hover{background:rgba(0,229,255,.1)}
+.btn-o:hover{background:rgba(201,168,76,.1)}
 
 /* HERO */
 #hero{padding-top:60px;min-height:100vh;display:flex;align-items:center}
@@ -60,25 +85,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:60px;display:flex;ali
 
 /* HERO CARD */
 .hero-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px;position:relative}
-.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:16px 16px 0 0;background:linear-gradient(90deg,#7b2fff,var(--cyan))}
+.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:16px 16px 0 0;background:linear-gradient(90deg,var(--cyan2),var(--cyan))}
 .hero-avatar{width:90px;height:90px;border-radius:50%;border:3px solid var(--cyan);object-fit:cover;display:block;margin:0 auto 14px}
 .hero-card-name{text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;letter-spacing:1px;margin-bottom:2px}
 .hero-card-role{text-align:center;font-size:13px;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px}
 .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
 .stat-val{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;color:var(--cyan)}
-.stat-val.pur{color:#b388ff}
+.stat-val.pur{color:var(--cyan2)}
 .stat-lbl{font-size:12px;color:var(--gray);letter-spacing:1.5px;text-transform:uppercase}
 .hero-tags{display:flex;flex-wrap:wrap;gap:7px}
-.htag{background:rgba(0,229,255,.08);border:1px solid rgba(0,229,255,.2);color:var(--cyan);font-size:12px;font-family:'Space Mono',monospace;padding:3px 10px;border-radius:3px}
+.htag{background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);color:var(--cyan);font-size:12px;font-family:'Space Mono',monospace;padding:3px 10px;border-radius:3px}
 
 /* STATS BAR */
 .stats-bar{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(3,1fr)}
 .sbi{padding:36px 80px;border-left:3px solid var(--cyan)}
-.sbi:nth-child(2){border-color:#b388ff}
-.sbi:nth-child(3){border-color:#ff6b6b}
+.sbi:nth-child(2){border-color:var(--cyan)}
+.sbi:nth-child(3){border-color:var(--cyan)}
 .sbv{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:36px;color:var(--cyan)}
-.sbi:nth-child(2) .sbv{color:#b388ff}
-.sbi:nth-child(3) .sbv{color:#ff6b6b}
+.sbi:nth-child(2) .sbv{color:var(--cyan)}
+.sbi:nth-child(3) .sbv{color:var(--cyan)}
 .sbl{font-size:13px;color:var(--gray);letter-spacing:2px;text-transform:uppercase}
 
 /* ABOUT */
@@ -87,9 +112,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:60px;display:flex;ali
 .about-text strong{color:var(--white)}
 
 .hl{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--cyan);border-radius:8px;padding:16px 20px}
-.hl:nth-child(2){border-left-color:#b388ff}
-.hl:nth-child(3){border-left-color:#ffa500}
-.hl:nth-child(4){border-left-color:#ff6b6b}
+.hl:nth-child(2){border-left-color:var(--cyan)}
+.hl:nth-child(3){border-left-color:var(--cyan)}
+.hl:nth-child(4){border-left-color:var(--cyan)}
 .hl-t{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:1px;margin-bottom:4px}
 .hl-d{font-size:13px;color:var(--gray)}
 
@@ -104,13 +129,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:60px;display:flex;ali
 .sk-tag{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);font-size:13px;color:var(--gray2);padding:3px 10px;border-radius:3px}
 
 /* SLIDER — opacity fade, NO auto */
-.slider-wrap{position:relative;border-radius:10px;overflow:hidden;background:#111;user-select:none}
+.slider-wrap{position:relative;border-radius:10px;overflow:hidden;background:#060f1e;user-select:none}
 .slides-container{position:relative;width:100%;padding-bottom:56.25%}
 .slide-item{position:absolute;inset:0;opacity:0;transition:opacity .35s ease}
 .slide-item.active{opacity:1}
 .slide-item img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
-.sl-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.75);border:1px solid rgba(0,229,255,.5);color:var(--cyan);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:22px;line-height:1;display:flex;align-items:center;justify-content:center;z-index:20;transition:background .2s}
-.sl-btn:hover{background:rgba(0,229,255,.2)}
+.sl-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.75);border:1px solid rgba(201,168,76,.5);color:var(--cyan);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:22px;line-height:1;display:flex;align-items:center;justify-content:center;z-index:20;transition:background .2s}
+.sl-btn:hover{background:rgba(201,168,76,.2)}
 .sl-prev{left:8px}
 .sl-next{right:8px}
 .sl-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:20}
@@ -126,8 +151,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:60px;display:flex;ali
 .proj-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;margin-bottom:12px}
 .proj-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:7px}
 .pb{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:3px;min-width:68px;text-align:center;flex-shrink:0;margin-top:2px}
-.pb-p{background:#c62828;color:#fff}.pb-d{background:#283593;color:#fff}
-.pb-a{background:#e65100;color:#fff}.pb-i{background:#1b5e20;color:#fff}
+.pb-p,.pb-d,.pb-a,.pb-i{background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.35);color:var(--cyan)}
 .proj-rt{font-size:13px;color:var(--gray2);line-height:1.5}
 .proj-imp{margin-top:10px;border-top:1px solid var(--border);padding-top:10px}
 .imp-lbl{font-size:12px;color:var(--cyan);font-family:'Space Mono',monospace;letter-spacing:1.5px;margin-bottom:4px}
@@ -142,10 +166,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:60px;display:flex;ali
 .exp-dot{position:absolute;left:0;top:14px;width:12px;height:12px;border-radius:50%;background:var(--cyan)}
 .exp-hdr{display:flex;align-items:baseline;gap:16px;margin-bottom:6px}
 .exp-co{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:28px}
-.exp-ten{background:rgba(0,229,255,.12);border:1px solid rgba(0,229,255,.25);color:var(--cyan);font-size:12px;font-family:'Space Mono',monospace;padding:3px 10px;border-radius:20px}
+.exp-ten{background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.25);color:var(--cyan);font-size:12px;font-family:'Space Mono',monospace;padding:3px 10px;border-radius:20px}
 .exp-meta{color:var(--gray);font-size:14px;margin-bottom:6px}
 .exp-tools{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
-.exp-tool{border:1px solid rgba(0,229,255,.3);color:var(--cyan);font-size:12px;padding:3px 12px;border-radius:3px}
+.exp-tool{border:1px solid rgba(201,168,76,.3);color:var(--cyan);font-size:12px;padding:3px 12px;border-radius:3px}
 .exp-items{display:flex;flex-direction:column;gap:12px}
 .exp-item{font-size:14px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px 20px;color:var(--gray2);line-height:1.6;border-left-width:3px}
 .exp-item strong{color:var(--white)}
@@ -171,7 +195,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:60px;display:flex;ali
 .ci-lbl{font-size:12px;color:var(--gray);letter-spacing:2px;text-transform:uppercase;font-family:'Space Mono',monospace;margin-bottom:2px}
 .ci-val{font-size:14px;color:var(--white)}
 .cta{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:28px;position:relative;overflow:hidden}
-.cta::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#7b2fff,var(--cyan))}
+.cta::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan2),var(--cyan))}
 .cta-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;margin-bottom:12px}
 .cta-text{color:var(--gray2);font-size:15px;line-height:1.7;margin-bottom:20px}
 
@@ -238,8 +262,21 @@ footer{border-top:1px solid var(--border);padding:24px 80px;display:flex;align-i
     <li><a onclick="navTo('experience')">Experience</a></li>
     <li><a onclick="navTo('contact')">Contact</a></li>
   </ul>
+  <a href="tel:+917007682626" class="nav-call">&#128222; +91 7007682626</a>
   <span class="hire" onclick="navTo('contact')">Hire Me</span>
 </nav>
+
+<div class="float-actions">
+  <a href="https://wa.me/917007682626?text=Hi%20Avinash%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" class="float-btn float-wa" aria-label="WhatsApp Avinash">
+    <span class="float-ring"></span>
+    <span class="float-btn-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.478 2 12c0 1.9.529 3.68 1.446 5.198L2 22l4.906-1.428A9.955 9.955 0 0012.001 22C17.523 22 22 17.522 22 12S17.523 2 12.001 2zm5.657 15.657A8.28 8.28 0 0112 20.16a8.28 8.28 0 01-4.206-1.147l-.301-.179-3.129.911.919-3.106-.196-.319A8.27 8.27 0 013.84 12c0-4.507 3.654-8.16 8.161-8.16 4.507 0 8.161 3.653 8.161 8.16 0 4.508-3.654 8.161-8.161 8.161z"/></svg></span>
+    <span class="float-tip">WhatsApp Me</span>
+  </a>
+  <a href="tel:+917007682626" class="float-btn float-call2" aria-label="Call Avinash">
+    <span class="float-btn-icon">&#128222;</span>
+    <span class="float-tip">Call Me</span>
+  </a>
+</div>
 
 <section id="hero">
 <div class="hero-inner">
@@ -250,10 +287,11 @@ footer{border-top:1px solid var(--border);padding:24px 80px;display:flex;align-i
       Results-driven Data Analyst specializing in <span class="accent">SQL (T-SQL), Power BI, Python &amp; Advanced Excel</span> — delivering BI solutions across Retail, E-Commerce &amp; Consumer Goods that drive revenue growth, retention, and operational efficiency, with hands-on experience in ETL, data warehousing (Snowflake, AWS S3), and workflow automation.
     </p>
     <div class="hero-btns">
+      <a href="https://wa.me/917007682626?text=Hi%20Avinash%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" class="btn-wa"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.478 2 12c0 1.9.529 3.68 1.446 5.198L2 22l4.906-1.428A9.955 9.955 0 0012.001 22C17.523 22 22 17.522 22 12S17.523 2 12.001 2zm5.657 15.657A8.28 8.28 0 0112 20.16a8.28 8.28 0 01-4.206-1.147l-.301-.179-3.129.911.919-3.106-.196-.319A8.27 8.27 0 013.84 12c0-4.507 3.654-8.16 8.161-8.16 4.507 0 8.161 3.653 8.161 8.16 0 4.508-3.654 8.161-8.161 8.161z"/></svg> WhatsApp Me</a>
+      <a href="tel:+917007682626" class="btn-o">&#128222; Call Me</a>
+      <span class="btn-o" onclick="navTo('projects')" style="cursor:pointer">View My Work &#8594;</span>
       <a href="https://linkedin.com/in/avinash7007" target="_blank" class="btn-o">LinkedIn &#8599;</a>
       <a href="https://github.com/Avinash7007" target="_blank" class="btn-o">GitHub &#8599;</a>
-      <span class="btn-p" onclick="navTo('projects')" style="cursor:pointer">View My Work &#8594;</span>
-      <span class="btn-o" onclick="navTo('contact')" style="cursor:pointer">Get in Touch</span>
     </div>
   </div>
   <div class="hero-card">
@@ -410,16 +448,16 @@ footer{border-top:1px solid var(--border);padding:24px 80px;display:flex;align-i
     <div class="exp-dot"></div>
     <div class="exp-hdr"><span class="exp-co">I3-Infosoft</span><span class="exp-ten">Jul 2023 – Present</span></div>
     <div class="exp-meta">Data Analyst &middot; Full-time</div>
-    <div class="exp-meta" style="margin-bottom:16px">Noida, Uttar Pradesh, India</div>
+    <div class="exp-meta" style="margin-bottom:16px">India</div>
     
     <div class="exp-tools"><span class="exp-tool">Power BI</span><span class="exp-tool">SQL Server</span><span class="exp-tool">T-SQL</span><span class="exp-tool">Python</span><span class="exp-tool">DAX</span><span class="exp-tool">Power Query</span><span class="exp-tool">Excel</span><span class="exp-tool">Snowflake</span><span class="exp-tool">AWS S3</span><span class="exp-tool">MySQL</span></div>
     <div class="exp-items">
       <div class="exp-item" style="border-left-color:var(--cyan)"><strong>&#128202; BI Development &amp; Dashboarding</strong> — Designed and deployed <span class="m">8+ Power BI dashboards</span> using DAX, Power Query, and star-schema models — tracking Sales, Revenue, Churn, and Customer KPIs for weekly executive reporting.</div>
-      <div class="exp-item" style="border-left-color:#b388ff"><strong>&#128451; SQL Analytics &amp; ETL Pipelines</strong> — Analyzed <span class="m">1M+ records/cycle</span> using T-SQL, CTEs, and Window Functions across Retail, E-commerce, and Consumer Goods accounts. Optimized T-SQL query performance by <span class="m">~25%</span>.</div>
-      <div class="exp-item" style="border-left-color:#ff6b6b"><strong>&#128101; Customer Segmentation &amp; Cohort Analysis</strong> — Conducted segmentation and cohort analysis for <span class="m">50K+ customers</span> — enabling targeted retention strategies and reducing churn risk by <span class="m">~12%</span>.</div>
-      <div class="exp-item" style="border-left-color:#ffa500"><strong>&#9889; Automation &amp; Data Quality</strong> — Automated ETL pipelines and reporting via Python, SQL &amp; Power Query. Managed CSV/flat-file ingestion with data validation checks — reducing turnaround by <span class="m">30–40%</span>, saving <span class="m">~15 hrs/week</span>.</div>
-      <div class="exp-item" style="border-left-color:#4caf50"><strong>&#9729; Cloud Data Warehousing</strong> — Applied <span class="m">Snowflake</span> and <span class="m">AWS S3</span> for data ingestion, SQL querying, and transformation in ETL and data warehousing projects; transformed <span class="m">100K+ records/month</span> from SQL Server, Excel, and flat files using Python (Pandas) and Power Query.</div>
-      <div class="exp-item" style="border-left-color:#2196f3"><strong>&#128221; Excel Reporting &amp; Stakeholder Collaboration</strong> — Developed dashboards using <span class="m">Power Pivot &amp; XLOOKUP</span> for same-day report delivery; delivered ad hoc analysis to 10+ stakeholders across Sales, Marketing, Finance &amp; Operations, and worked with cross-functional teams across 4 departments.</div>
+      <div class="exp-item" style="border-left-color:var(--cyan)"><strong>&#128451; SQL Analytics &amp; ETL Pipelines</strong> — Analyzed <span class="m">1M+ records/cycle</span> using T-SQL, CTEs, and Window Functions across Retail, E-commerce, and Consumer Goods accounts. Optimized T-SQL query performance by <span class="m">~25%</span>.</div>
+      <div class="exp-item" style="border-left-color:var(--cyan)"><strong>&#128101; Customer Segmentation &amp; Cohort Analysis</strong> — Conducted segmentation and cohort analysis for <span class="m">50K+ customers</span> — enabling targeted retention strategies and reducing churn risk by <span class="m">~12%</span>.</div>
+      <div class="exp-item" style="border-left-color:var(--cyan)"><strong>&#9889; Automation &amp; Data Quality</strong> — Automated ETL pipelines and reporting via Python, SQL &amp; Power Query. Managed CSV/flat-file ingestion with data validation checks — reducing turnaround by <span class="m">30–40%</span>, saving <span class="m">~15 hrs/week</span>.</div>
+      <div class="exp-item" style="border-left-color:var(--cyan)"><strong>&#9729; Cloud Data Warehousing</strong> — Applied <span class="m">Snowflake</span> and <span class="m">AWS S3</span> for data ingestion, SQL querying, and transformation in ETL and data warehousing projects; transformed <span class="m">100K+ records/month</span> from SQL Server, Excel, and flat files using Python (Pandas) and Power Query.</div>
+      <div class="exp-item" style="border-left-color:var(--cyan)"><strong>&#128221; Excel Reporting &amp; Stakeholder Collaboration</strong> — Developed dashboards using <span class="m">Power Pivot &amp; XLOOKUP</span> for same-day report delivery; delivered ad hoc analysis to 10+ stakeholders across Sales, Marketing, Finance &amp; Operations, and worked with cross-functional teams across 4 departments.</div>
     </div>
   </div>
 
@@ -432,7 +470,7 @@ footer{border-top:1px solid var(--border);padding:24px 80px;display:flex;align-i
     <div class="exp-tools"><span class="exp-tool">Microsoft Excel</span><span class="exp-tool">Data Tracking</span><span class="exp-tool">Reporting</span></div>
     <div class="exp-items">
       <div class="exp-item" style="border-left-color:var(--cyan)"><strong>&#128202; Production &amp; Business Data Management</strong> — Managed daily production and business data in Microsoft Excel for a <span class="m">15+ member production team</span>, tracking <span class="m">200+ records weekly</span> and maintaining data integrity across operations.</div>
-      <div class="exp-item" style="border-left-color:#b388ff"><strong>&#128203; Reporting &amp; Coordination</strong> — Prepared <span class="m">20+ daily and monthly production reports</span> for 3 internal departments, coordinating with team leads to support planning and operational decisions.</div>
+      <div class="exp-item" style="border-left-color:var(--cyan)"><strong>&#128203; Reporting &amp; Coordination</strong> — Prepared <span class="m">20+ daily and monthly production reports</span> for 3 internal departments, coordinating with team leads to support planning and operational decisions.</div>
     </div>
   </div>
 </div>
@@ -479,6 +517,7 @@ footer{border-top:1px solid var(--border);padding:24px 80px;display:flex;align-i
       <div class="contact-list">
         <a id="email-ci" href="#" class="ci"><span class="ci-icon">&#9993;</span><div><div class="ci-lbl">Email</div><div class="ci-val" id="email-display">dubeyavinash157&#64;gmail&#46;com</div></div></a>
         <a href="tel:+917007682626" class="ci"><span class="ci-icon">&#128241;</span><div><div class="ci-lbl">Phone</div><div class="ci-val">+91 7007682626</div></div></a>
+        <a href="https://wa.me/917007682626?text=Hi%20Avinash%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" class="ci"><span class="ci-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.478 2 12c0 1.9.529 3.68 1.446 5.198L2 22l4.906-1.428A9.955 9.955 0 0012.001 22C17.523 22 22 17.522 22 12S17.523 2 12.001 2zm5.657 15.657A8.28 8.28 0 0112 20.16a8.28 8.28 0 01-4.206-1.147l-.301-.179-3.129.911.919-3.106-.196-.319A8.27 8.27 0 013.84 12c0-4.507 3.654-8.16 8.161-8.16 4.507 0 8.161 3.653 8.161 8.16 0 4.508-3.654 8.161-8.161 8.161z"/></svg></span><div><div class="ci-lbl">WhatsApp</div><div class="ci-val">+91 7007682626</div></div></a>
         <a href="https://linkedin.com/in/avinash7007" target="_blank" class="ci"><span class="ci-icon">&#128188;</span><div><div class="ci-lbl">LinkedIn</div><div class="ci-val">linkedin.com/in/avinash7007</div></div></a>
         <a href="https://github.com/Avinash7007" target="_blank" class="ci"><span class="ci-icon">&#128008;</span><div><div class="ci-lbl">GitHub</div><div class="ci-val">github.com/Avinash7007</div></div></a>
       </div>
@@ -493,7 +532,7 @@ footer{border-top:1px solid var(--border);padding:24px 80px;display:flex;align-i
 
 <footer>
   <div class="footer-name">Avinash Dubey</div>
-  <div>&#169; 2026 &middot; Data Analyst &middot; Noida, India</div>
+  <div>&#169; 2026 &middot; Data Analyst &middot; India</div>
 </footer>
 
 <script>
@@ -598,6 +637,3 @@ initSlider(3);
 </script>
 </body>
 </html>
-
-
-
