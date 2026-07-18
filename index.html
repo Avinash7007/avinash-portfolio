@@ -16,6 +16,19 @@
 <meta name="twitter:title" content="Avinash Dubey - Data Analyst"/>
 <meta name="twitter:description" content="Data Analyst with 3+ years of experience in SQL, Power BI, Python. Based in NCR, India."/>
 <link rel="canonical" href="https://avinash7007.github.io/avinash-portfolio/"/>
+
+<!-- Google Analytics 4 -->
+<!-- STEP 1: Go to analytics.google.com -> create a free GA4 property for this site -->
+<!-- STEP 2: Copy your Measurement ID (looks like G-XXXXXXXXXX) -->
+<!-- STEP 3: Replace BOTH occurrences of G-XXXXXXXXXX below with your real ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
@@ -43,7 +56,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:60px;display:flex;ali
 @media(max-width:900px){.nav-call{display:none}}
 
 /* FLOATING CALL BUTTON */
-.float-actions{position:fixed;right:24px;bottom:24px;display:flex;flex-direction:column;gap:12px;z-index:998;align-items:flex-end}
+.float-actions{position:fixed;right:24px;bottom:24px;display:flex;flex-direction:column;gap:12px;z-index:998;align-items:flex-end;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .3s,transform .3s}
+.float-actions.show{opacity:1;pointer-events:auto;transform:translateY(0)}
 .float-btn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;position:relative;transition:transform .2s}
 .float-btn:hover{transform:scale(1.08)}
 .float-btn-icon{font-size:23px;position:relative;z-index:2}
@@ -149,7 +163,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:60px;display:flex;ali
 .proj-type{font-size:12px;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;font-family:'Space Mono',monospace;padding:14px 18px 0}
 .proj-body{padding:10px 18px 18px;flex:1;display:flex;flex-direction:column}
 .proj-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;margin-bottom:12px}
-.proj-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:7px}
+.proj-row{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;line-height:1.55}
 .pb{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:3px;min-width:68px;text-align:center;flex-shrink:0;margin-top:2px}
 .pb-p,.pb-d,.pb-a,.pb-i{background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.35);color:var(--cyan)}
 .proj-rt{font-size:13px;color:var(--gray2);line-height:1.5}
@@ -266,7 +280,7 @@ footer{border-top:1px solid var(--border);padding:24px 80px;display:flex;align-i
   <span class="hire" onclick="navTo('contact')">Hire Me</span>
 </nav>
 
-<div class="float-actions">
+<div class="float-actions" id="floatActions">
   <a href="https://wa.me/917007682626?text=Hi%20Avinash%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" class="float-btn float-wa" aria-label="WhatsApp Avinash">
     <span class="float-ring"></span>
     <span class="float-btn-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.478 2 12c0 1.9.529 3.68 1.446 5.198L2 22l4.906-1.428A9.955 9.955 0 0012.001 22C17.523 22 22 17.522 22 12S17.523 2 12.001 2zm5.657 15.657A8.28 8.28 0 0112 20.16a8.28 8.28 0 01-4.206-1.147l-.301-.179-3.129.911.919-3.106-.196-.319A8.27 8.27 0 013.84 12c0-4.507 3.654-8.16 8.161-8.16 4.507 0 8.161 3.653 8.161 8.16 0 4.508-3.654 8.161-8.161 8.161z"/></svg></span>
@@ -624,7 +638,57 @@ initSlider(1);
 initSlider(2);
 initSlider(3);
 
-// Set email links at runtime to avoid obfuscation
+// ===== ANALYTICS: Section view + CTA click tracking (Google Analytics 4) =====
+(function() {
+  function track(name, params) {
+    if (typeof gtag === 'function') gtag('event', name, params || {});
+  }
+
+  // Track which sections the visitor actually scrolls to and views
+  var sections = document.querySelectorAll('section[id], div[id="about"], div[id="skills"], div[id="projects"], div[id="experience"], div[id="certificates"], div[id="contact"]');
+  var seen = {};
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        var id = entry.target.id;
+        if (entry.isIntersecting && id && !seen[id]) {
+          seen[id] = true;
+          track('section_view', { section_name: id });
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(function(s) { obs.observe(s); });
+  }
+
+  // Track clicks on key conversion actions
+  function bind(selector, eventName, extra) {
+    document.querySelectorAll(selector).forEach(function(el) {
+      el.addEventListener('click', function() {
+        track(eventName, extra || {});
+      });
+    });
+  }
+  bind('a[href^="https://wa.me/"]', 'whatsapp_click');
+  bind('a[href^="tel:"]', 'call_click');
+  bind('#email-ci, #email-btn', 'email_click');
+  bind('a[href*="linkedin.com"]', 'linkedin_click');
+  bind('a[href*="github.com"]', 'github_click');
+  bind('.hire', 'hire_me_click');
+})();
+
+(function() {
+  var fa = document.getElementById('floatActions');
+  var hero = document.getElementById('hero');
+  if (!fa || !hero) return;
+  function toggleFloat() {
+    var heroBottom = hero.getBoundingClientRect().bottom;
+    if (heroBottom < 100) { fa.classList.add('show'); }
+    else { fa.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', toggleFloat, { passive: true });
+  toggleFloat();
+})();
+
 (function() {
   var u = 'dubeyavinash157';
   var d = 'gmail.com';
